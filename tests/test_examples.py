@@ -4,13 +4,13 @@ from config import validator
 
 
 def test_examples():
-    with open(test_path / "test_definitions.yaml") as def_file:
+    with open(test_path / 'test_definitions.yaml') as def_file:
         test_spec = yaml.safe_load(def_file)
-    for test in test_spec["tests"]:
-        print(f"Testing {test['test_file']}")
-        with open(examples_path / test["test_file"]) as datafile:
+    for test in test_spec['tests']:
+        print (f"Testing {test['test_file']}")
+        with open(examples_path / test['test_file']) as datafile:
             data = yaml.safe_load(datafile)
-        class_validator = validator[test["definition"]]
+        class_validator = validator[test['definition']]
         try:
             assert class_validator.validate(data) is None
         except AssertionError as e:
@@ -19,13 +19,13 @@ def test_examples():
 
 def test_invalid_examples():
     """Each instance in test_invalid_definitions.yaml MUST fail validation."""
-    with open(test_path / "test_invalid_definitions.yaml") as def_file:
+    with open(test_path / 'test_invalid_definitions.yaml') as def_file:
         test_spec = yaml.safe_load(def_file)
-    for test in test_spec["tests"]:
+    for test in test_spec['tests']:
         print(f"Testing (expect invalid) {test['test_file']}")
-        with open(invalid_examples_path / test["test_file"]) as datafile:
+        with open(invalid_examples_path / test['test_file']) as datafile:
             data = yaml.safe_load(datafile)
-        class_validator = validator[test["definition"]]
+        class_validator = validator[test['definition']]
         if class_validator.is_valid(data):
             raise AssertionError(
                 f"{test['test_file']} validated against "
