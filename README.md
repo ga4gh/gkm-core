@@ -31,7 +31,7 @@ source documents, from the root directory:
 > document_
 
 These commands are powered by the GA4GH metaschema processor
-([ga4gh/gks-metaschema](https://github.com/ga4gh/gks-metaschema)), which defines the
+([ga4gh/gkm-metaschema](https://github.com/ga4gh/gkm-metaschema)), which defines the
 `*-source.yaml` dialect and generates the split JSON Schema/RST files from it. See that
 repo for details on how source documents are processed.
 
