@@ -206,6 +206,7 @@ $defs:
           oneOf:
             - $ref: "#/$defs/MappableConcept"
             - $ref: "#/$defs/ConceptSet"
+            - $ref: "#/$defs/iriReference"
         description: >-
           A list of concepts that are dependent (occurring together), or independent (existing separately), depending on the
           membership operator.

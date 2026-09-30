@@ -1,0 +1,11 @@
+type: ConceptSet
+conceptSetType: Molecular Consequence
+membershipOperator: OR
+concepts:
+  - type: MappableConcept
+    conceptType: Molecular Consequence
+    name: missense_variant
+    primaryCoding:
+      code: SO:0001583
+      system: http://sequenceontology.org/
+  - https://sequenceontology.org/browser/current_svn/term/SO:0001587

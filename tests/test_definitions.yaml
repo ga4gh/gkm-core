@@ -15,6 +15,10 @@ tests:
   description: concept set of molecular consequences
   schema: gkm-core
   definition: ConceptSet
+- test_file: concept-set-with-iri-reference.yaml
+  description: concept set mixing a MappableConcept with an iriReference member
+  schema: gkm-core
+  definition: ConceptSet
 - test_file: extension.yaml
   description: extension example
   schema: gkm-core
