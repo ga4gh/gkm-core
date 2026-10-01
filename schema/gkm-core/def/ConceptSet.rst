@@ -1,6 +1,7 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -57,12 +58,17 @@ Some ConceptSet attributes are inherited from :ref:`Entity`.
       - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
+   *  - conceptSetType
+      -
+      - string
+      - 0..1
+      - A term indicating the type of concept being represented by the ConceptSet.
    *  - concepts
       -
                         .. raw:: html
 
                             <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
-      - :ref:`MappableConcept` | :ref:`ConceptSet`
+      - :ref:`MappableConcept` | :ref:`ConceptSet` | :ref:`iriReference`
       - 2..m
       - A list of concepts that are dependent (occurring together), or independent (existing separately), depending on the membership operator.
    *  - membershipOperator
@@ -70,3 +76,5 @@ Some ConceptSet attributes are inherited from :ref:`Entity`.
       - string
       - 1..1
       - The logical relationship between concepts in the set, in the context of some knowledge reported about them. The value 'AND' indicates that the concepts are dependent and occur together in this context - i.e. the reported assertion is not necessarily true for each concept on its own - only in combination with the other(s). The value 'OR' indicates that each concept applies independently in this context - i.e. the reported assertion is necessarily true for each concept on its own, independent of the presence of the other(s).
+
+**Inherits:** :ref:`Entity`

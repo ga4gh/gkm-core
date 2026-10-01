@@ -1,6 +1,7 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -75,3 +76,12 @@ Some MappableConcept attributes are inherited from :ref:`Entity`.
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+
+**Additional Constraints**
+
+This class requires at least one of *name* or *primaryCoding*.
+
+
+**Inherits:** :ref:`Entity`
+
+**Used in:** :ref:`ConceptSet`
